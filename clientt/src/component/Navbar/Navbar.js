@@ -44,20 +44,22 @@ const Navbar = () => {
                         </button>
                     </>
                 ) : (
-                    <Link to="/register">
+                    <Link to="/login">
                         <button type="button" className="logoin regBtn ms-3">
                             Log in
                         </button>
                     </Link>
                 )}
 
-                <button type="button" className="position-relative batch_btn ms-sm-4">
-                    <FaCartPlus size={22} className="cart_shop" />
+                <Link to="/cart">
+                    <button type="button" className="position-relative batch_btn ms-sm-4">
+                        <FaCartPlus size={22} className="cart_shop" />
 
-                    <span className="position-absolute mt-1 top-0 start-110 translate-middle badge rounded-pill bg-info batch_pill">
-                        3
-                    </span>
-                </button>
+                        <span className="position-absolute mt-1 top-0 start-110 translate-middle badge rounded-pill bg-info batch_pill">
+                            3
+                        </span>
+                    </button>
+                </Link>
             </div>
 
             <div className="res_navbar">
@@ -89,7 +91,7 @@ const Navbar = () => {
                                     </button>
                                 </>
                             ) : (
-                                <Link to="/register">
+                                <Link to="/login">
                                     <button type="button" className="logoin regBtn ">
                                         Log in
                                     </button>

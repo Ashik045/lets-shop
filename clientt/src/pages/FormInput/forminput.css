@@ -1,13 +1,37 @@
 .formLebel {
-  display: block;
   font-weight: bold;
   margin-top: 10px;
+  display: block;
 }
 
 .formInp {
+  display: block;
   width: 90%;
   padding: 4px 10px;
   border-radius: 6px;
-  border: 2px solid #5a5959;
+  border: 1px solid #928f8f;
+}
+
+.err_msg {
+  padding: 3px;
+  font-size: 13px;
+  color: red;
+  margin-top: -5px;
+  margin-bottom: -13px;
+  display: none;
+}
+
+.formInp:invalid[focus="true"] ~ .err_msg {
+  display: block;
+}
+
+.formInp:invalid[focus="false"] ~ .err_msg {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .formInp {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=forminput.css.map */

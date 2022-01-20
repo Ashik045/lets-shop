@@ -1,1 +1,236 @@
-/* No CSS *//*# sourceMappingURL=Login.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Outfit:wght@900&display=swap");
+.login_sec {
+  width: 100%;
+  height: 600px;
+  z-index: -2;
+}
+
+.login_sec .main_login {
+  width: 80%;
+  height: 75vh;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #ab66ff 0%, #74b6f7 90%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  border-radius: 15px;
+}
+
+.login_sec .main_login .login_header {
+  text-align: center;
+  padding: 15px 0px 20px;
+  font-weight: 1000;
+  color: #eff2fa;
+  font-family: "Merriweather", serif;
+}
+
+.login_sec .main_login .main_sec {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 42% 5% 52%;
+      grid-template-columns: 42% 5% 52%;
+  grid-gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login_sec .main_login .main_sec .left_side {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.login_sec .main_login .main_sec .left_side .social_btn {
+  display: block;
+  margin: 15px 0px;
+  height: 40px;
+  width: 160px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.login_sec .main_login .main_sec .left_side .social_btn:hover {
+  margin-left: 12px;
+}
+
+.login_sec .main_login .main_sec .left_side .google {
+  background-color: #ff304f;
+}
+
+.login_sec .main_login .main_sec .left_side .facebook {
+  background-color: #3d5af1;
+}
+
+.login_sec .main_login .main_sec .left_side .github {
+  background-color: #0e153a;
+}
+
+.login_sec .main_login .main_sec .h_line {
+  height: 300px;
+  width: 2px;
+  background-color: #6b6a69;
+  position: relative;
+  z-index: 1;
+}
+
+.login_sec .main_login .main_sec .h_line p {
+  padding: 10px 13px 11px;
+  border: 1px solid #6b6a69;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #eff2fa;
+  font-weight: bold;
+}
+
+.login_sec .main_login .main_sec .v_line {
+  margin-top: 20px;
+  display: none;
+  width: 350px;
+  height: 2px;
+  background-color: #6b6a69;
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login_sec .main_login .main_sec .v_line p {
+  padding: 10px 14px 11px;
+  border: 1px solid #6b6a69;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: #eff2fa;
+  font-weight: bold;
+}
+
+.login_sec .main_login .main_sec .login_form {
+  margin-top: 30px;
+}
+
+.login_sec .main_login .main_sec .login_form .submit_btn {
+  margin: 30px 0px 15px;
+  display: inline-block;
+  padding: 8px 40px;
+  border-radius: 20px;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  background: none;
+  font-weight: bold;
+  margin-left: 30%;
+}
+
+.login_sec .main_login .main_sec .login_form .submit_btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #095c70;
+  z-index: -2;
+}
+
+.login_sec .main_login .main_sec .login_form .submit_btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.login_sec .main_login .main_sec .login_form .submit_btn:hover {
+  color: #fff;
+  overflow: hidden;
+}
+
+.login_sec .main_login .main_sec .login_form .submit_btn:hover:before {
+  width: 100%;
+}
+
+.login_sec .main_login .main_sec .login_form .go_sign {
+  display: block;
+  color: #1f1f20;
+}
+
+@media screen and (max-width: 767px) {
+  .login_sec .main_login {
+    width: 90%;
+    height: 90vh;
+  }
+  .login_sec .main_login .main_sec {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .login_sec .main_login .main_sec .left_side {
+    margin-top: -10px;
+  }
+  .login_sec .main_login .main_sec .left_side .social_btn {
+    margin: 10px 0px;
+    width: 180px;
+  }
+  .login_sec .main_login .main_sec .h_line {
+    display: none;
+  }
+  .login_sec .main_login .main_sec .v_line {
+    display: block;
+  }
+  .login_sec .main_login .main_sec .login_form {
+    margin-top: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .login_sec .main_login .main_sec .login_form .submit_btn {
+    margin: 20px 0px 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .login_sec .main_login {
+    height: 100vh;
+  }
+  .login_sec .main_login .main_sec .v_line {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login_sec .main_login {
+    height: 105vh;
+  }
+  .login_sec .main_login .main_sec .v_line {
+    width: 220px;
+    margin-top: 5px;
+    margin-bottom: -10px;
+  }
+}
+/*# sourceMappingURL=Login.css.map */

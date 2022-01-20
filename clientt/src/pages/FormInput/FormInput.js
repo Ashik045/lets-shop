@@ -1,15 +1,30 @@
-import React from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState } from 'react';
 import './forminput.css';
 
-const FormInput = ({ ...details }) => {
-    const { type, placeholder, name, label } = details;
+const FormInput = (props) => {
+    const [focus, setFocus] = useState(false);
+    const { label, errMsg, onChange, ...others } = props;
+
+    const handleFocus = () => {
+        setFocus(true);
+    };
+
     return (
         <>
-            <label className="formLebel" htmlFor={name}>
-                {label}:
-            </label>
-            <input className="formInp" type={type} placeholder={placeholder} />
+            <label className="formLebel">{label}:</label>
+            <input
+                className="formInp"
+                onChange={onChange}
+                {...others}
+                onBlur={handleFocus}
+                onFocus={() => others.name === 'conPassword' && setFocus(true)}
+                focus={focus.toString()}
+            />
+            <p className="err_msg">{errMsg}</p>
         </>
     );
 };
+
 export default FormInput;
