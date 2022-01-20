@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Luxurious+Roman&family=Merriweather:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+.detail_card {
+  height: 300px;
+  width: 100%;
+  margin-left: 6%;
+  .carousel_card {
+    background-color: #dee1ec;
+    border-radius: 10px;
+    padding: 20px;
+
+    h3 {
+      margin-top: 40px;
+      font-family: "Fredoka One", cursive;
+      color: #5068a9;
+    }
+    p {
+      margin-top: 50px;
+      font-family: "Courgette", cursive;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .detail_card {
+    width: 100%;
+    margin-left: 0%;
+
+    .carousel_card {
+      h3 {
+        margin-top: 20px;
+      }
+    }
+  }
+}

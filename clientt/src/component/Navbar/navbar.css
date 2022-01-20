@@ -1,0 +1,211 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 50% 25%;
+      grid-template-columns: 25% 50% 25%;
+  position: relative;
+  z-index: 120;
+  position: fixed;
+  top: 0;
+  background-color: #fcfafa;
+}
+
+.navbar .brand {
+  cursor: pointer;
+  margin-left: 12%;
+}
+
+.navbar .brand img {
+  width: 140px;
+  height: auto;
+  background: none;
+  margin-left: 3%;
+}
+
+.navbar .nav_menu {
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: 7px;
+}
+
+.navbar .nav_menu .nav_item {
+  text-decoration: none;
+  color: #5d5f5f;
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.navbar .nav_menu .nav_item:hover {
+  color: #3c3d3d;
+  font-weight: 700;
+  -webkit-transition: 0.08s ease;
+  transition: 0.08s ease;
+}
+
+.navbar .user_login .regBtn {
+  border-radius: 5px;
+  background: none;
+  border: 2px solid black;
+  padding: 6px 16px;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar .user_login .regBtn:hover {
+  background-color: black;
+  color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navbar .user_login img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+
+.navbar .user_login .batch_btn {
+  background: none;
+  border: none;
+}
+
+.navbar .res_navbar {
+  position: absolute;
+  right: 8%;
+  display: none;
+}
+
+.navbar .res_navbar .res_nav_menu {
+  width: 300px;
+  background-color: #a8a6a6;
+  position: absolute;
+  right: -20px;
+  z-index: 100;
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.navbar .res_navbar .res_nav_menu .nav_item {
+  display: block;
+  text-decoration: none;
+  color: #5d5f5f;
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.navbar .res_navbar .res_nav_menu .nav_item:hover {
+  color: #2a2b2b;
+  font-weight: 700;
+  -webkit-transition: 0.08s ease;
+  transition: 0.08s ease;
+}
+
+.navbar .res_navbar .res_nav_menu .res_user_login {
+  display: none;
+  margin: 10px 0px 10px 5px;
+}
+
+.navbar .res_navbar .res_nav_menu .res_user_login .regBtn {
+  border-radius: 5px;
+  background: none;
+  border: 2px solid black;
+  padding: 8px 16px;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar .res_navbar .res_nav_menu .res_user_login .regBtn:hover {
+  background-color: black;
+  color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.navbar .res_navbar .res_nav_menu .res_user_login img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 0px 10px;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(30px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 47% 28%;
+        grid-template-columns: 25% 47% 28%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar .nav_menu {
+    display: none;
+  }
+  .navbar .user_login {
+    margin-left: auto;
+  }
+  .navbar .user_login .regBtn {
+    padding: 6px 13px;
+  }
+  .navbar .user_login img {
+    height: 35px;
+    width: 35px;
+  }
+  .navbar .res_navbar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar .brand {
+    display: -ms-grid;
+    display: grid;
+  }
+  .navbar .brand img {
+    width: 110px;
+    margin-left: 3%;
+  }
+  .navbar .user_login .regBtn {
+    display: none;
+  }
+  .navbar .user_login img {
+    height: 30px;
+    width: 30px;
+  }
+  .navbar .user_login .batch_btn {
+    margin-right: -20px;
+  }
+  .navbar .res_navbar .res_nav_menu .res_user_login {
+    display: block;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

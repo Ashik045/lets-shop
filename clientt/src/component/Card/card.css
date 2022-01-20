@@ -1,0 +1,67 @@
+.cardd {
+  position: relative;
+  border-radius: 10px;
+}
+
+.cardd img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cardd h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 1000;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.cardd .shop_btn {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  padding: 6px 13px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #d8f2f5;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.cardd:hover .shop_btn {
+  position: absolute;
+  top: 57%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+  border: 2px solid #5a6061;
+}
+
+@media screen and (max-width: 576px) {
+  .cardd h3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    -webkit-transform: translate(-40%, -40%);
+            transform: translate(-40%, -40%);
+  }
+  .cardd .shop_btn {
+    position: absolute;
+    top: 70%;
+    left: 32%;
+  }
+  .cardd:hover .shop_btn {
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 1;
+    border: 2px solid #5a6061;
+  }
+}
+/*# sourceMappingURL=card.css.map */

@@ -1,0 +1,28 @@
+.categorys {
+  .category_item {
+    margin: 100px 0px 80px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .categorys {
+    .category_item {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 20px;
+    }
+  }
+}
+
+@media screen and(max-width: 576px) {
+  .categorys {
+    .category_item {
+      display: grid;
+      grid-template-columns: 95%;
+      justify-content: center;
+    }
+  }
+}

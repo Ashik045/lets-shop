@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=Roboto+Mono:ital@1&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=Mochiy+Pop+P+One&family=Varela+Round&display=swap");
+.header {
+  margin-top: 110px;
+  padding-bottom: 50px !important;
+}
+
+.header .search_sec {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+}
+
+.header .search_sec .search_inp {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header .search_sec .search_inp .search_inpp {
+  padding: 11px 15px;
+  border: none;
+  width: 60%;
+  font-weight: bold;
+  z-index: -1;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.header .search_sec .search_inp .search_inpp:focus {
+  border: 1px solid lightgray;
+}
+
+.header .search_sec .search_inp .search_icon {
+  z-index: 1;
+  margin-left: -40px;
+  cursor: pointer;
+  color: #555454;
+}
+
+.header .search_sec h2 {
+  font-weight: 900;
+  color: #3e4a61;
+}
+
+.header .slider_sec {
+  margin-top: 30px;
+  width: 100%;
+  height: 600px !important;
+  overflow: hidden;
+}
+
+.header .slider_sec .mySwiper {
+  background-position: center;
+  background-size: cover;
+}
+
+.header .slider_sec .mySwiper img {
+  display: block;
+  width: 100%;
+  height: 100% !important;
+}
+
+.header .slider_sec .mySwiper .cmnImg {
+  position: relative;
+  height: 100% !important;
+  z-index: -2;
+}
+
+.header .slider_sec .mySwiper .imgTxt {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  margin-left: 2%;
+  width: 40%;
+  z-index: 2;
+}
+
+.header .slider_sec .mySwiper .imgTxt .cmnHtxt {
+  font-weight: 900;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: "Mochiy Pop P One", sans-serif;
+  color: white;
+}
+
+.header .slider_sec .mySwiper .imgTxt .cmnDtxt {
+  font-family: "Varela Round", sans-serif;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.header .slider_sec .mySwiper .imgTxt2 {
+  position: absolute;
+  top: 200px;
+  right: 50px;
+  margin-right: 2%;
+  text-align: right;
+}
+
+.header .slider_sec .mySwiper .imgTxt2 .cmnHtxt {
+  font-weight: 900;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: "Mochiy Pop P One", sans-serif;
+  color: white;
+}
+
+.header .slider_sec .mySwiper .imgTxt2 .cmnDtxt {
+  font-family: "Varela Round", sans-serif;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    margin-top: 75px;
+  }
+  .header .search_sec {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .header .search_sec .search_inp .search_inpp {
+    width: 85%;
+  }
+  .header .search_sec h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .header .slider_sec .mySwiper .imgTxt {
+    width: 30% !important;
+    margin-top: -120px;
+    margin-left: -20px !important;
+  }
+  .header .slider_sec .mySwiper .imgTxt .cmnHtxt {
+    font-weight: 700 !important;
+    font-size: 28px !important;
+  }
+  .header .slider_sec .mySwiper .imgTxt .cmnDtxt {
+    font-size: 17px;
+  }
+  .header .slider_sec .mySwiper .imgTxt2 {
+    margin-top: -120px;
+    width: 40% !important;
+  }
+  .header .slider_sec .mySwiper .imgTxt2 .cmnHtxt {
+    font-weight: 700 !important;
+    font-size: 28px !important;
+  }
+  .header .slider_sec .mySwiper .imgTxt2 .cmnDtxt {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header .slider_sec .mySwiper .imgTxt {
+    width: 40%;
+    margin-top: -180px;
+  }
+  .header .slider_sec .mySwiper .imgTxt .cmnHtxt {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+  }
+  .header .slider_sec .mySwiper .imgTxt .cmnDtxt {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .header .slider_sec .mySwiper .imgTxt2 {
+    width: 40%;
+    margin-top: -180px;
+  }
+  .header .slider_sec .mySwiper .imgTxt2 .cmnHtxt {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+  }
+  .header .slider_sec .mySwiper .imgTxt2 .cmnDtxt {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,123 @@
+.footerDetail {
+  background-color: #403f3f;
+  overflow: hidden;
+  .footer_det {
+    padding: 40px 0px 40px;
+    display: grid;
+    grid-template-columns: 17% 60% 23%;
+    color: rgb(199, 194, 194);
+    .left_sec {
+      img {
+        height: auto;
+        width: 120px;
+      }
+
+      p {
+        margin-top: 10px;
+      }
+
+      .icon_sec {
+        margin-top: 30px;
+        .s_icon {
+          padding: 0px 7px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .single_footer {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+    }
+
+    .right_sec {
+      .r_head {
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      iframe {
+        padding: 10px;
+        border-radius: 10px;
+        // margin-top: 40px;
+        margin-left: auto;
+        margin-top: 20px;
+      }
+
+      .contact {
+        margin-left: 7%;
+        .icon {
+          font-size: 20px;
+          padding: 0px 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 991px) {
+  .footerDetail {
+    .footer_det {
+      display: grid;
+      grid-template-columns: 25% 75%;
+      grid-gap: 20px;
+
+      .right_sec {
+        width: 350px;
+        margin-top: 30px;
+
+        .r_head {
+          text-align: start;
+          //   margin-right: auto;
+        }
+
+        .contact {
+          margin-left: 1%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .footerDetail {
+    .footer_det {
+      //   display: grid;
+      //   grid-template-columns: 30% 70%;
+      //   grid-gap: 20px;
+
+      .single_footer {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 30px;
+      }
+    }
+  }
+}
+@media screen and(max-width: 576px) {
+  .footerDetail {
+    .footer_det {
+      margin-left: 7%;
+      display: grid;
+      grid-template-columns: 95%;
+      grid-gap: 20px;
+
+      .single_footer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 30px;
+      }
+
+      .right_sec {
+        iframe {
+          margin-left: -20px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.signup_sec {
+  width: 100%;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(45, 116, 213, 1) 11.2%,
+    rgba(121, 137, 212, 1) 91.2%
+  );
+  height: 700px;
+
+  .origin_signup {
+    padding-top: 100px;
+    .main_signup {
+      width: 80%;
+      height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: 45% 55%;
+      justify-content: center;
+      //   align-items: center;
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+
+      .reg_left {
+        background-color: #e2f3f5;
+        img {
+          width: 100%;
+          height: auto;
+          margin-top: 90px;
+        }
+      }
+
+      .reg_right {
+        padding: 10px 40px;
+        h4 {
+          text-align: center;
+          margin: 0px 0px 25px;
+        }
+      }
+    }
+  }
+}

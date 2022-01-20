@@ -1,0 +1,13 @@
+.formLebel {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.formInp {
+  width: 90%;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 2px solid #5a5959;
+}
+/*# sourceMappingURL=forminput.css.map */

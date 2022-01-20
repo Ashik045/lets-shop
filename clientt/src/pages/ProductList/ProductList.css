@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Outfit:wght@900&display=swap");
+.main_productlist .list_header {
+  margin-top: 93px;
+  background-color: teal;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 6px 0px;
+  z-index: 20;
+}
+
+.main_productlist .topgap {
+  padding-top: 250px;
+  padding-bottom: 70px;
+}
+
+.main_productlist .productlist_sec {
+  margin-bottom: 110px;
+}
+
+.main_productlist .productlist_sec h2 {
+  text-align: center;
+  margin: 5px 0px 40px;
+  font-weight: 1000;
+  color: #3e4a61;
+  font-family: "Merriweather", serif;
+}
+
+.main_productlist .productlist_sec .product_list .form_sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main_productlist .productlist_sec .product_list .form_sec .list_left .label {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.main_productlist .productlist_sec .product_list .form_sec .list_left .select {
+  margin-left: 5px;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.main_productlist .productlist_sec .product_list .form_sec .list_right .label {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.main_productlist .productlist_sec .product_list .form_sec .list_right .select {
+  margin-left: 5px;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+@media screen and (max-width: 576px) {
+  .main_productlist .productlist_sec .product_list .form_sec .list_left .label {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .main_productlist .productlist_sec .product_list .form_sec .list_right .label {
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
+/*# sourceMappingURL=ProductList.css.map */

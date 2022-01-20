@@ -1,0 +1,46 @@
+.signup_sec {
+  width: 100%;
+  background-image: linear-gradient(109.6deg, #2d74d5 11.2%, #7989d4 91.2%);
+  height: 700px;
+}
+
+.signup_sec .origin_signup {
+  padding-top: 100px;
+}
+
+.signup_sec .origin_signup .main_signup {
+  width: 80%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.signup_sec .origin_signup .main_signup .reg_left {
+  background-color: #e2f3f5;
+}
+
+.signup_sec .origin_signup .main_signup .reg_left img {
+  width: 100%;
+  height: auto;
+  margin-top: 90px;
+}
+
+.signup_sec .origin_signup .main_signup .reg_right {
+  padding: 10px 40px;
+}
+
+.signup_sec .origin_signup .main_signup .reg_right h4 {
+  text-align: center;
+  margin: 0px 0px 25px;
+}
+/*# sourceMappingURL=signup.css.map */

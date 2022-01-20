@@ -1,0 +1,118 @@
+.footerDetail {
+  background-color: #403f3f;
+  overflow: hidden;
+}
+
+.footerDetail .footer_det {
+  padding: 40px 0px 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 17% 60% 23%;
+      grid-template-columns: 17% 60% 23%;
+  color: #c7c2c2;
+}
+
+.footerDetail .footer_det .left_sec img {
+  height: auto;
+  width: 120px;
+}
+
+.footerDetail .footer_det .left_sec p {
+  margin-top: 10px;
+}
+
+.footerDetail .footer_det .left_sec .icon_sec {
+  margin-top: 30px;
+}
+
+.footerDetail .footer_det .left_sec .icon_sec .s_icon {
+  padding: 0px 7px;
+  cursor: pointer;
+}
+
+.footerDetail .footer_det .single_footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footerDetail .footer_det .right_sec .r_head {
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footerDetail .footer_det .right_sec iframe {
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.footerDetail .footer_det .right_sec .contact {
+  margin-left: 7%;
+}
+
+.footerDetail .footer_det .right_sec .contact .icon {
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .footerDetail .footer_det {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 75%;
+        grid-template-columns: 25% 75%;
+    grid-gap: 20px;
+  }
+  .footerDetail .footer_det .right_sec {
+    width: 350px;
+    margin-top: 30px;
+  }
+  .footerDetail .footer_det .right_sec .r_head {
+    text-align: start;
+  }
+  .footerDetail .footer_det .right_sec .contact {
+    margin-left: 1%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footerDetail .footer_det .single_footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footerDetail .footer_det {
+    margin-left: 7%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 95%;
+        grid-template-columns: 95%;
+    grid-gap: 20px;
+  }
+  .footerDetail .footer_det .single_footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-gap: 30px;
+  }
+  .footerDetail .footer_det .right_sec iframe {
+    margin-left: -20px;
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=footerdetail.css.map */

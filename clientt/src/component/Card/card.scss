@@ -1,0 +1,71 @@
+.cardd {
+  position: relative;
+  border-radius: 10px;
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 1000;
+    letter-spacing: 1px;
+    // text-shadow: 4px 2px 2px #000000;
+    color: white;
+  }
+
+  .shop_btn {
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    padding: 6px 13px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #d8f2f5;
+    font-weight: bold;
+    opacity: 0;
+  }
+}
+
+.cardd:hover {
+  .shop_btn {
+    position: absolute;
+    top: 57%;
+    // left: 40%;
+    transition: all 0.3s ease;
+    opacity: 1;
+    border: 2px solid #5a6061;
+  }
+}
+
+@media screen and(max-width: 576px) {
+  .cardd {
+    h3 {
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      transform: translate(-40%, -40%);
+    }
+    .shop_btn {
+      position: absolute;
+      top: 70%;
+      left: 32%;
+    }
+  }
+
+  .cardd:hover {
+    .shop_btn {
+      position: absolute;
+      top: 50%;
+      // left: 40%;
+      transition: all 0.3s ease;
+      opacity: 1;
+      border: 2px solid #5a6061;
+    }
+  }
+}

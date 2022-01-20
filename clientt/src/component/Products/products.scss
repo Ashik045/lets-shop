@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Outfit:wght@900&display=swap");
+
+.product_sec {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+  h2 {
+    text-align: center;
+    font-weight: 1000;
+    color: #3e4a61;
+    padding: 0px 50px 40px;
+    font-family: "Merriweather", serif;
+  }
+  .product_items {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and(max-width: 991px) {
+  .product_sec {
+    .product_items {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 15px;
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .product_sec {
+    // margin-top: -50px;
+    .product_items {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
+}
+
+@media screen and(max-width: 576px) {
+  .product_sec {
+    // margin-top: -200px;
+    .product_items {
+      display: grid;
+      grid-template-columns: 80%;
+      display: grid;
+      justify-content: center;
+    }
+  }
+}

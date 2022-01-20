@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=Roboto+Mono:ital@1&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=Mochiy+Pop+P+One&family=Varela+Round&display=swap");
+
+.header {
+  margin-top: 110px;
+  padding-bottom: 50px !important;
+
+  .search_sec {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    .search_inp {
+      //   position: relative;
+      text-align: center;
+      margin-top: 20px;
+
+      .search_inpp {
+        padding: 11px 15px;
+        border: none;
+        width: 60%;
+        font-weight: bold;
+        // position: relative;
+        z-index: -1;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      }
+
+      .search_inpp:focus {
+        border: 1px solid lightgray;
+      }
+
+      .search_icon {
+        z-index: 1;
+        margin-left: -40px;
+        cursor: pointer;
+        color: rgb(85, 84, 84);
+      }
+    }
+
+    h2 {
+      //   text-align: center;
+      font-weight: 900;
+      color: #3e4a61;
+    }
+  }
+
+  .slider_sec {
+    margin-top: 30px;
+    width: 100%;
+    height: 600px !important;
+    overflow: hidden;
+
+    .mySwiper {
+      background-position: center;
+      background-size: cover;
+    }
+
+    .mySwiper {
+      img {
+        display: block;
+        width: 100%;
+        height: 100% !important;
+      }
+
+      .cmnImg {
+        position: relative;
+        height: 100% !important;
+        z-index: -2;
+      }
+      .imgTxt {
+        position: absolute;
+        top: 200px;
+        left: 50px;
+        margin-left: 2%;
+        width: 40%;
+        z-index: 2;
+        .cmnHtxt {
+          font-weight: 900;
+          font-size: 32px;
+          text-transform: uppercase;
+
+          font-family: "Mochiy Pop P One", sans-serif;
+          color: white;
+        }
+
+        .cmnDtxt {
+          font-family: "Varela Round", sans-serif;
+          text-transform: uppercase;
+          margin-top: 30px;
+        }
+      }
+
+      .imgTxt2 {
+        position: absolute;
+        top: 200px;
+        right: 50px;
+        margin-right: 2%;
+        text-align: right;
+
+        .cmnHtxt {
+          font-weight: 900;
+          font-size: 32px;
+          text-transform: uppercase;
+
+          font-family: "Mochiy Pop P One", sans-serif;
+          color: white;
+        }
+
+        .cmnDtxt {
+          font-family: "Varela Round", sans-serif;
+          text-transform: uppercase;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    margin-top: 75px;
+    .search_sec {
+      display: grid;
+      grid-template-columns: 100%;
+
+      .search_inp {
+        .search_inpp {
+          width: 85%;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+
+    .slider_sec {
+      .mySwiper {
+        .imgTxt {
+          width: 30% !important;
+          margin-top: -120px;
+          margin-left: -20px !important;
+
+          .cmnHtxt {
+            font-weight: 700 !important;
+            font-size: 28px !important;
+          }
+
+          .cmnDtxt {
+            font-size: 17px;
+          }
+        }
+
+        .imgTxt2 {
+          margin-top: -120px;
+          width: 40% !important;
+
+          .cmnHtxt {
+            font-weight: 700 !important;
+            font-size: 28px !important;
+          }
+
+          .cmnDtxt {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    .slider_sec {
+      .mySwiper {
+        .imgTxt {
+          width: 40%;
+          margin-top: -180px;
+
+          .cmnHtxt {
+            font-weight: 500 !important;
+            font-size: 20px !important;
+          }
+
+          .cmnDtxt {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+        }
+
+        .imgTxt2 {
+          width: 40%;
+          margin-top: -180px;
+
+          .cmnHtxt {
+            font-weight: 500 !important;
+            font-size: 20px !important;
+          }
+
+          .cmnDtxt {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

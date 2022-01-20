@@ -1,0 +1,24 @@
+.footer {
+  p {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 25px;
+  }
+  .footer_item {
+    .item {
+      display: block;
+      color: rgb(199, 194, 194);
+      text-decoration: none;
+      cursor: pointer;
+      padding: 4px 2px;
+    }
+    .item:hover {
+      transition: all 0.03s ease;
+      color: rgb(175, 169, 169);
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: underline;
+    }
+  }
+}
