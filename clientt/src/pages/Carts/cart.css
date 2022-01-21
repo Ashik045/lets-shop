@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Outfit:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Oswald:wght@500&display=swap");
+.cart_page {
+  margin-top: 80px;
+}
+
+.cart_page h2 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 1000;
+  color: #3e4a61;
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=cart.css.map */

@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './app.css';
 import MainHome from './component/MainHome/MainHome';
 import Navbar from './component/Navbar/Navbar';
-import Cart from './pages/Cart/Cart';
+import Carts from './pages/Carts/Carts';
 import Login from './pages/Login/Login';
 import ProductList from './pages/ProductList/ProductList';
 import Signup from './pages/Signup/Signup';
@@ -22,7 +22,7 @@ function App() {
                     <Route path="/product" element={<SingleProduct />} />
                     <Route path="/register" element={<Signup />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/cart" element={<Carts />} />
                 </Routes>
             </main>
         </BrowserRouter>

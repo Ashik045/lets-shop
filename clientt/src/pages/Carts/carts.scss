@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Outfit:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,600;1,400&family=Merriweather:ital,wght@1,900&family=Oswald:wght@500&display=swap");
+$color: #0cf;
+
+@mixin cartbtn {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  background: none;
+  font-weight: bold;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    z-index: -2;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($color, 15%);
+    transition: all 0.3s;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    overflow: hidden;
+
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.carts_page {
+  margin-top: 80px;
+
+  .main_page {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    // overflow-x: hidden;
+
+    h2 {
+      text-align: center;
+      font-weight: 1000;
+      color: #3e4a61;
+      font-family: "Merriweather", serif;
+      text-transform: capitalize;
+      margin-bottom: 30px;
+    }
+
+    .carts_header {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      justify-content: center;
+      // justify-content: space-between;
+      position: relative;
+
+      .header_left {
+        .carts_btn {
+          @include cartbtn();
+
+          .left_arrow {
+            margin-top: -3px;
+          }
+        }
+        .carts_btn:hover .left_arrow {
+          margin-top: -3px;
+          animation: slide-left 0.5s both;
+        }
+
+        @keyframes slide-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-10px);
+          }
+        }
+      }
+
+      .header_middle {
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .header_right {
+        margin-left: 40%;
+        .carts_btn {
+          @include cartbtn();
+
+          .right_arrow {
+            margin-top: -3px;
+          }
+        }
+        .carts_btn:hover .right_arrow {
+          margin-top: -3px;
+          animation: slide-left2 0.5s both;
+        }
+
+        @keyframes slide-left2 {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(10px);
+          }
+        }
+      }
+    }
+
+    .carts {
+      .single_cart_header {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        justify-items: center;
+        // grid-gap: 10px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carts_page {
+    .main_page {
+      .carts_header {
+        .header_left {
+          .carts_btn {
+            padding: 3px 7px;
+            font-weight: 400;
+
+            .left_arrow {
+              display: none;
+            }
+            // width: 80px;
+          }
+        }
+        .header_right {
+          margin-left: 0px;
+
+          .carts_btn {
+            padding: 3px 7px;
+            font-weight: 400;
+
+            .right_arrow {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .carts {
+        .single_cart_header {
+          display: grid;
+          grid-template-columns: 30% 20% 20% 20%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
