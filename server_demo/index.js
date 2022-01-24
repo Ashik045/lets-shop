@@ -2,55 +2,59 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
 // internal import
-const loginRoute = require('./routers/loginRoute');
-const signUpRoute = require('./routers/signUpROute');
-const inboxRoute = require('./routers/inboxRoute');
+const userRouter = require('./routes/userRouter');
+const authRouter = require('./routes/authRouter');
+const productRouter = require('./routes/productRouter');
+const cartRouter = require('./routes/cartRouter');
+const orderRouter = require('./routes/orderRouter');
 
 const app = express();
+
 dotenv.config();
-
 app.use(cors());
-app.use(express.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cookieParser(process.env.COOKIE_SECRET));
 
-// database connection
+// database connnection with mongodb
 mongoose
-    .connect(process.env.MONGODB_CONNECTION_STRING, {
+    .connect(process.env.DATABASE_CONNECTION_STRING, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
     })
-    .then(() => console.log('database connection successfull'))
-    .catch((err) => console.log(err));
+    .then(() => {
+        console.log('mongodb connection successfull');
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 
-// routing
-app.use('/login', loginRoute);
-app.use('/users', signUpRoute);
-app.use('/inbox', inboxRoute);
+// application routing
+app.use('/api/auth', authRouter); // check done
+app.use('/api/users', userRouter); // check done
+app.use('/api/products', productRouter); // check done
+app.use('/api/cart', cartRouter);
+app.use('/api/order', orderRouter);
 
-// ************ error handling ****************
 // not found handler
 app.use((req, res, next) => {
     res.status(404).json({
-        error: 'requested url not found',
+        error: 'Requested url not found!',
     });
-    next();
 });
 
-// application error handler
+// error handling
 app.use((err, req, res, next) => {
     res.status(500).json({
         error: err,
     });
 });
 
-// application running on
-app.listen(process.env.APP_PORT || 4000, () => {
-    console.log(`listening on ${process.env.APP_PORT} port`);
+// application connection port
+app.listen(process.env.APP_CONNECTION_PORT || 4000, () => {
+    console.log(`application running on ${process.env.APP_CONNECTION_PORT}`);
 });
