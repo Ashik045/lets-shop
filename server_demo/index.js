@@ -37,8 +37,8 @@ mongoose
 app.use('/api/auth', authRouter); // check done
 app.use('/api/users', userRouter); // check done
 app.use('/api/products', productRouter); // check done
-app.use('/api/cart', cartRouter);
-app.use('/api/order', orderRouter);
+app.use('/api/cart', cartRouter); // check done
+app.use('/api/order', orderRouter); // * failed to find a user Order, get all, get monthly income*
 
 // not found handler
 app.use((req, res, next) => {

@@ -24,10 +24,14 @@ const ProductSchema = mongoose.Schema(
             require: true,
         },
         color: {
-            type: String,
+            type: Array,
         },
         size: {
-            type: String,
+            type: Array,
+        },
+        isStock: {
+            type: Boolean,
+            default: true,
         },
     },
     { timestamps: true }

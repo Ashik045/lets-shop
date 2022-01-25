@@ -57,7 +57,7 @@ const deleteOrder = async (req, res) => {
             });
         } catch {
             res.status(500).json({
-                error: 'Failed to delete a Order',
+                error: 'Failed to delete a Order!',
             });
         }
     } else {
@@ -78,12 +78,12 @@ const findOneOrder = async (req, res) => {
             });
         } catch {
             res.status(500).json({
-                error: 'Failed to find Order',
+                error: 'Failed to find Order!',
             });
         }
     } else {
         res.status(500).json({
-                error: 'Failed to find Order',
+                error: 'Failed to find Order!',
             });
     }
 };
