@@ -11,8 +11,8 @@
 
 .cardd h3 {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 48%;
+  left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-weight: 1000;
@@ -42,18 +42,35 @@
   border: 2px solid #5a6061;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .cardd h3 {
     position: absolute;
-    top: 40%;
-    left: 40%;
-    -webkit-transform: translate(-40%, -40%);
-            transform: translate(-40%, -40%);
+    top: 48%;
+    left: 54%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .cardd .shop_btn {
     position: absolute;
     top: 70%;
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cardd h3 {
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    -webkit-transform: translate(-45%, -50%);
+            transform: translate(-45%, -50%);
+  }
+  .cardd .shop_btn {
+    position: absolute;
+    top: 80%;
     left: 32%;
+    -webkit-transform: translate(-1%, 44%);
+            transform: translate(-1%, 44%);
   }
   .cardd:hover .shop_btn {
     position: absolute;

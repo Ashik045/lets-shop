@@ -18,8 +18,11 @@
 .product_sec .product_items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-gap: 10px;
 }
 
@@ -27,8 +30,8 @@
   .product_sec .product_items {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+    -ms-grid-columns: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
     grid-gap: 15px;
   }
 }
@@ -37,8 +40,8 @@
   .product_sec .product_items {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
   }
 }
 

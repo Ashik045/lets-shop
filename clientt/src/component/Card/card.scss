@@ -9,8 +9,8 @@
 
   h3 {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 45%;
     transform: translate(-50%, -50%);
     font-weight: 1000;
     letter-spacing: 1px;
@@ -43,18 +43,38 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .cardd {
+    h3 {
+      position: absolute;
+      top: 48%;
+      left: 54%;
+      transform: translate(-50%, -50%);
+    }
+
+    .shop_btn {
+      position: absolute;
+      top: 70%;
+      left: 30%;
+    }
+  }
+}
+
 @media screen and(max-width: 576px) {
   .cardd {
     h3 {
       position: absolute;
-      top: 40%;
-      left: 40%;
-      transform: translate(-40%, -40%);
+      top: 45%;
+      left: 55%;
+      transform: translate(-45%, -50%);
     }
     .shop_btn {
       position: absolute;
-      top: 70%;
+      top: 80%;
       left: 32%;
+      transform: translate(-1%, 44%);
+
+      // transform: translate(-70%, -72%);
     }
   }
 

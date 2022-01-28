@@ -1,21 +1,27 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useContext, useState } from 'react';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Context } from '../../context/context';
 import FormInput from '../FormInput/FormInput';
 import './Login.css';
+
 
 const Login = () => {
     const [valus, setValus] = useState({
         email: '',
         password: '',
     });
+    const [authErr, setAuthErr] = useState(false);
 
+    const { dispatch, isFetching } = useContext(Context)
+    
     const inputDetails = [
         {
             id: 1,
             type: 'email',
-            name: 'Email',
+            name: 'email',
             label: 'Email',
             errMsg: 'Please provide a valid email address!',
             required: true,
@@ -23,7 +29,7 @@ const Login = () => {
         {
             id: 2,
             type: 'password',
-            name: 'Password',
+            name: 'password',
             label: 'Password',
             required: true,
         },
@@ -33,9 +39,28 @@ const Login = () => {
         setValus({ ...valus, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+   
+    const nevigate = useNavigate();
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(valus);
+        const { email, password } = valus;
+
+        try {
+           const user = await axios.post('http://localhost:4000/api/auth/login', {
+                email,
+                password
+            })
+            
+            dispatch({type: 'LOGIN_SUCCESS', payload: user.data.message})
+            console.log(user.data);
+            nevigate('/')
+        } catch (error) {
+            setAuthErr(true)
+            console.log(error);
+            dispatch({type: 'LOGIN_FAILURE'})
+        }
+
     };
 
     return (
@@ -70,6 +95,8 @@ const Login = () => {
                                 onChange={handleChange}
                             />
                         ))}
+
+                        {authErr && <p className="mt-1" style={{color: 'red', marginBottom: '-12px'}}>Authentication failed!</p>}
 
                         <button className="submit_btn" type="submit">
                             Log In

@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React from 'react';
 import { BiCart, BiHeart, BiSearch } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
@@ -11,11 +12,11 @@ const Product = ({ item }) => (
 
         <div className="product_icons">
             <div className="product_icon">
-                <Link to="/productlist">
+                <Link to={`/product/${item._id}`}>
                     <BiSearch className="icons" />
                 </Link>
-                <BiCart className="icons middle" />
-                <BiHeart className="icons" />
+                <BiHeart className="icons middle" />
+                <BiCart className="icons " />
             </div>
         </div>
     </div>

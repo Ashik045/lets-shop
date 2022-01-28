@@ -1,15 +1,16 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-unused-vars */
+import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import regImg from '../../image/connect2-removebg-preview.png';
 import FormInput from '../FormInput/FormInput';
 import './signup.css';
 
 const Signup = () => {
     const [values, setValues] = useState({
-        fullName: '',
-        userName: '',
+        fullname: '',
+        username: '',
         email: '',
         password: '',
         conPassword: '',
@@ -20,7 +21,7 @@ const Signup = () => {
             id: 1,
             type: 'text',
             placeholder: 'Enter your name',
-            name: 'fullName',
+            name: 'fullname',
             label: 'Full Name',
             errMsg: 'This field is required!',
             required: true,
@@ -29,7 +30,7 @@ const Signup = () => {
             id: 3,
             type: 'text',
             placeholder: 'Username',
-            name: 'userName',
+            name: 'username',
             label: 'Username',
             errMsg: 'Username should be 5-15 characters and should not include any special character!',
             pattern: '^[A-Za-z0-9]{5,15}$',
@@ -70,10 +71,32 @@ const Signup = () => {
         setValues({ ...values, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const nevigate = useNavigate()
 
-        console.log(values);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const {fullname, username, email, password, ...others} = values
+
+        try {
+            await axios.post('http://localhost:4000/api/auth/register', {
+                fullname,
+                username,
+                email,
+                password
+            })
+            
+            setValues({
+                fullname: '',
+                username: '',
+                email: '',
+                password: '',
+                conPassword: ''
+            })
+            nevigate('/login')
+        } catch (error) {
+            console.log(error);
+        }
+
     };
 
     return (

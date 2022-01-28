@@ -1,15 +1,21 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { BiMenu, BiX } from 'react-icons/bi';
 import { FaCartPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/context';
 import brand from '../../image/brand.png';
 import noPhoto from '../../image/no-photo.png';
 import './navbar.css';
 
 const Navbar = () => {
-    const [user, setUser] = useState(false);
     const [toggler, setToggler] = useState(true);
+    const {user, dispatch} = useContext(Context)
+
+    const logout = () => {
+        setToggler(false)
+        dispatch({type: 'LOGOUT'})
+    }
 
     return (
         <div className="navbar">
@@ -39,7 +45,7 @@ const Navbar = () => {
                 {user ? (
                     <>
                         <img src={noPhoto} alt="" />
-                        <button type="button" className="logout regBtn">
+                        <button type="button" className="logout regBtn" onClick={logout}>
                             Log Out
                         </button>
                     </>
@@ -86,7 +92,7 @@ const Navbar = () => {
                         <div className="res_user_login">
                             {user ? (
                                 <>
-                                    <button type="button" className="logout regBtn">
+                                    <button type="button" className="logout regBtn" onClick={logout}>
                                         Log Out
                                     </button>
                                 </>

@@ -1,16 +1,32 @@
 /* eslint-disable jsx-a11y/no-onchange */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-unused-expressions */
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 import FooterDetail from '../../component/FooterDetail/FooterDetail';
 import NewsLetter from '../../component/Newsletter/Newsletter';
-import item2 from '../../image/item2-removebg-preview.png';
 import './singleproduct.css';
 
 const SingleProduct = () => {
     const [selectColorVal, setSelectColorVal] = useState('');
     const [selectSizeVal, setSelectSizeVal] = useState('');
     const [itemVal, setItemVal] = useState(1);
+    const [product, setProduct] = useState({});
+    const location = useLocation();
+    const id = location.pathname.split('/')[2];
+
+    useEffect(() => {
+        const getProducts = async () => {
+            const res = await axios.get(`http://localhost:4000/api/products/find/${id}`);
+
+            console.log(res.data.message);
+            setProduct(res.data.message);
+        };
+
+        getProducts();
+    }, [id]);
 
     useEffect(() => {
         const selectData = {
@@ -21,7 +37,7 @@ const SingleProduct = () => {
     }, [selectColorVal, selectSizeVal]);
 
     const decrease = () => {
-        setItemVal(itemVal - 1);
+        itemVal > 1 && setItemVal(itemVal - 1);
     };
 
     const increase = () => {
@@ -35,19 +51,13 @@ const SingleProduct = () => {
             <div className="singleProduct_main container">
                 <div className="singleProduct_main2">
                     <div className="left_side">
-                        <img src={item2} alt="a" />
+                        <img src={product.image} alt="a" />
                     </div>
 
                     <div className="right_side">
-                        <h3 className="product_title">Lehenga</h3>
-                        <div className="product_text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-                            doloribus commodi ipsum voluptate illum eum pariatur quam at. Quod
-                            corrupti placeat modi reiciendis! Vitae quia veritatis sit dolorem
-                            libero unde. Debitis dolor reiciendis quos et tenetur laboriosam alias
-                            velit doloremque.
-                        </div>
-                        <h4 className="product_price">$25</h4>
+                        <h3 className="product_title">{product.title}</h3>
+                        <div className="product_text">{product.desc}</div>
+                        <h4 className="product_price">{product.price}</h4>
 
                         <form className="form_sec">
                             <div className="list_left">
@@ -59,12 +69,9 @@ const SingleProduct = () => {
                                     onChange={(e) => setSelectColorVal(e.target.value)}
                                     className="select ms-sm-3 ms-1"
                                 >
-                                    <option disabled>Color</option>
-                                    <option value="Black">Black</option>
-                                    <option value="White">White</option>
-                                    <option value="Blue">Blue</option>
-                                    <option value="Yellow">Yellow</option>
-                                    <option value="Red">Red</option>
+                                    {product.color?.map((c) => (
+                                        <option key={c}>{c}</option>
+                                    ))}
                                 </select>
                             </div>
 
@@ -77,12 +84,9 @@ const SingleProduct = () => {
                                     onChange={(e) => setSelectSizeVal(e.target.value)}
                                     className="select ms-1 ms-sm-3"
                                 >
-                                    <option disabled>Size</option>
-                                    <option value="XS">XS</option>
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                    <option value="XL">XL</option>
+                                    {product.size?.map((s) => (
+                                        <option key={s}>{s}</option>
+                                    ))}
                                 </select>
                             </div>
                         </form>

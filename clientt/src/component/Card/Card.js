@@ -7,7 +7,7 @@ const Card = ({ details }) => (
         <img src={details.image} alt="s" />
 
         <h3>{details.title}</h3>
-        <Link to="/productlist">
+        <Link to={`/products/${details.cat}`}>
             <button type="button" className="shop_btn">
                 Shop now
             </button>

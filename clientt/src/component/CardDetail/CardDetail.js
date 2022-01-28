@@ -8,18 +8,21 @@ import './CardDetail.css';
 const Cdetails = [
     {
         id: 1,
-        title: 'SHIRT STYLE',
+        title: 'JACKET STYLE',
         image: style1,
+        cat: 'jacket',
     },
     {
         id: 2,
-        title: 'DRESS STYLE',
+        title: 'JEANS STYLE',
         image: style2,
+        cat: 'jeans',
     },
     {
         id: 3,
-        title: 'SHIRT STYLE',
+        title: 'WOMAN DRESS',
         image: style3,
+        cat: 'woman',
     },
 ];
 
