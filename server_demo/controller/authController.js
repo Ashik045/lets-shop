@@ -47,9 +47,8 @@ const loginUser = async (req, res) => {
                     { expiresIn: '2d' }
                 );
 
-                const { password, ...others } = user;
                 res.status(200).json({
-                    message: others,
+                    message: user,
                     token,
                 });
             } else {

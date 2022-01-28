@@ -96,7 +96,7 @@ const findByQuery = async (req, res) => {
 
             let product;
             if (qNew) {
-                product = await ProductModel.find().sort({ createdAt: -1 }).limit(5);
+                product = await ProductModel.find().sort({ createdAt: -1 }).limit(6);
             } else if (qCategory) {
                 product = await ProductModel.find({
                     category: {
@@ -104,7 +104,7 @@ const findByQuery = async (req, res) => {
                 },
             });
             } else {
-                product = await ProductModel.find();
+                product = await ProductModel.find().limit(8);
             }
 
             res.status(200).json({
