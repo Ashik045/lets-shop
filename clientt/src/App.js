@@ -16,6 +16,7 @@ import SingleProduct from './pages/SingleProduct/SingleProduct';
 function App() {
     const {user} = useContext(Context)
     AOS.init();
+    
     return (
         <BrowserRouter>
             <main className="App">
